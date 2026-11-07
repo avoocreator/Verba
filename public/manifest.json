@@ -1,0 +1,16 @@
+{
+  "name": "Verba — Word Garden",
+  "short_name": "Verba",
+  "description": "AI-powered English vocabulary platform for Indonesian learners with cozy Word Garden concept",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4EFE0",
+  "theme_color": "#4A7A45",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}

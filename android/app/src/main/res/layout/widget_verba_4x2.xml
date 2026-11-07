@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/widget_bg"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/widget_streak_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#2F3A2C" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="🔥 Hari"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#4A7A45" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/widget_level_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Level 1"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#5C6752" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/widget_world_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="🌲 Hutan Pagi"
+        android:textSize="11sp"
+        android:textColor="#5C6752" />
+
+    <TextView
+        android:id="@+id/widget_status_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Waktunya Merawat Kebun 🌱"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#2F3A2C" />
+
+    <TextView
+        android:id="@+id/widget_status_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Kartu kosakata siap direview"
+        android:textSize="11sp"
+        android:textColor="#5C6752" />
+
+    <Button
+        android:id="@+id/widget_btn_action"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:background="#4A7A45"
+        android:text="Mulai Belajar"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

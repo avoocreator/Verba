@@ -1,0 +1,9 @@
+<svg viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="192" height="192" rx="48" fill="#4A7A45" />
+  <circle cx="96" cy="96" r="70" fill="#F4EFE0" />
+  <!-- Sprout -->
+  <ellipse cx="96" cy="130" rx="30" ry="7" fill="#6E472A" opacity="0.3" />
+  <path d="M96 130C96 100 95 86 96 74" stroke="#4A7A45" stroke-width="7" stroke-linecap="round" />
+  <path d="M96 80C72 80 56 60 68 44C84 40 96 66 96 80Z" fill="#8FCB8A" stroke="#3D6B39" stroke-width="3" />
+  <path d="M96 80C120 80 136 60 124 44C108 40 96 66 96 80Z" fill="#A8E6A3" stroke="#3D6B39" stroke-width="3" />
+</svg>

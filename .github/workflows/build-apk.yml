@@ -1,0 +1,73 @@
+name: Build APK Verba
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-apk-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ambil kode
+        uses: actions/checkout@v4
+
+      - name: Pasang Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Pasang Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Pasang Java 21 + Cache Gradle
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+          cache: gradle
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build web (Next.js static export ke folder out)
+        run: bun run build
+
+      - name: Sync web assets ke project Android
+        run: bunx cap sync android
+
+      - name: Build APK (Release / Debug)
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon --stacktrace
+
+      - name: Siapkan file APK
+        run: |
+          mkdir -p apk
+          cp android/app/build/outputs/apk/debug/app-debug.apk apk/Verba.apk
+          ls -lh apk/
+
+      - name: Upload artifact build
+        uses: actions/upload-artifact@v4
+        with:
+          name: Verba-APK
+          path: apk/Verba.apk
+
+      - name: Buat / perbarui Release "latest"
+        uses: marvinpinto/action-automatic-releases@v1.2.1
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          automatic_release_tag: "latest"
+          prerelease: false
+          title: "Verba v2 APK (Terbaru)"
+          files: apk/Verba.apk

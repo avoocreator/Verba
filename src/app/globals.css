@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Hutan Pagi */
+    --bg: #F4EFE0;
+    --surface: #FBF8EE;
+    --surface2: #EFE9D7;
+    --border: #DCD4C0;
+    --text: #2F3A2C;
+    --text-muted: #5C6752;
+    --accent: #4A7A45;
+    --accent-hover: #3D6B39;
+    --accent-contrast: #FFFFFF;
+    --accent-link: #3F6B3B;
+    --wood: #8A5D3B;
+    --wood-light: #C49A6C;
+    --wood-border: #6E472A;
+    --success: #3D8B40;
+    --warn: #C97D1A;
+    --bad: #B33927;
+    --seed-color: #A08264;
+    --sprout-color: #4A7A45;
+    --grown-color: #2F6F4E;
+    --bloom-color: #D46A8E;
+  }
+
+  /* Dark */
+  .dark {
+    --bg: #14201C;
+    --surface: #1C2B26;
+    --surface2: #243530;
+    --border: #2D423C;
+    --text: #EAF0E3;
+    --text-muted: #A9B8A6;
+    --accent: #8FCB8A;
+    --accent-hover: #A4DC9F;
+    --accent-contrast: #0F2410;
+    --accent-link: #8FCB8A;
+    --wood: #6A482E;
+    --wood-light: #8E6545;
+    --wood-border: #4A301D;
+    --success: #4CAF50;
+    --warn: #E09A3E;
+    --bad: #D9534F;
+    --seed-color: #C2A585;
+    --sprout-color: #8FCB8A;
+    --grown-color: #58A77E;
+    --bloom-color: #F08CAE;
+  }
+
+  /* Tepi Danau */
+  [data-world="lake"] {
+    --bg: #EBF2F0;
+    --surface: #F5F9F8;
+    --surface2: #DEEAE6;
+    --border: #C8DBD5;
+    --text: #1C332D;
+    --text-muted: #49635C;
+    --accent: #2E7979;
+    --accent-hover: #226161;
+    --accent-contrast: #FFFFFF;
+    --accent-link: #266B6B;
+    --wood: #7A614A;
+    --wood-light: #B89C80;
+    --wood-border: #5A4432;
+  }
+
+  /* Padang Bunga */
+  [data-world="field"] {
+    --bg: #F7F3E6;
+    --surface: #FDFBF4;
+    --surface2: #EFE8D3;
+    --border: #DFD5BC;
+    --text: #3B3322;
+    --text-muted: #6E634A;
+    --accent: #6C8B22;
+    --accent-hover: #58741B;
+    --accent-contrast: #FFFFFF;
+    --accent-link: #5F7C1C;
+    --wood: #875936;
+    --wood-light: #C08D63;
+    --wood-border: #6B4223;
+  }
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shadows */
+.shadow-cozy {
+  box-shadow: 0 4px 16px -2px rgba(47, 58, 44, 0.08), 0 2px 6px -1px rgba(47, 58, 44, 0.04);
+}
+
+.shadow-cozy-lg {
+  box-shadow: 0 10px 25px -4px rgba(47, 58, 44, 0.12), 0 4px 10px -2px rgba(47, 58, 44, 0.06);
+}
+
+.shadow-wood {
+  box-shadow: inset 0 -2px 0 0 rgba(0, 0, 0, 0.2), 0 3px 6px rgba(110, 71, 42, 0.25);
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
